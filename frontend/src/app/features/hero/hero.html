@@ -1,0 +1,71 @@
+<section class="hero-wrap">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <nav class="nav">
+    <div class="nav-logo">SW<span>.</span></div>
+    <ul class="nav-links">
+      <li *ngFor="let link of navLinks">
+        <a href="#">{{ link }}</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="badge">
+        <div class="badge-dot"></div>
+        Available for SDE roles
+      </div>
+
+      <h1 class="hero-name">
+        Sammeyak<br />
+        <span class="accent">Wankhade</span>
+      </h1>
+
+      <p class="hero-role">Full Stack Software Engineer</p>
+
+      <p class="hero-desc">
+        Building production-grade web applications at Cooee (UK). Specializing in NestJS, Angular,
+        MongoDB, and TypeScript — focused on scalable backends and clean UIs.
+      </p>
+
+      <div class="hero-btns">
+        <a href="https://github.com/Sammeyak797" target="_blank" class="btn-primary">
+          <i class="ti ti-brand-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/sammeyak-wankhade" target="_blank" class="btn-ghost">
+          <i class="ti ti-brand-linkedin"></i> LinkedIn
+        </a>
+        <a href="assets/resume/Sammeyak_Wankhade_Resume.pdf" target="_blank" class="btn-ghost">
+          <i class="ti ti-download"></i> Resume
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="glass-card">
+        <div class="photo-circle">
+          <img src="../../../assets/images/profile.jpg" alt="Sammeyak Wankhade" />
+        </div>
+
+        <div class="tech-chips">
+          <span class="chip" *ngFor="let tech of techStack">{{ tech }}</span>
+        </div>
+
+        <div class="card-stats">
+          <div class="card-stat" *ngFor="let stat of stats">
+            <span class="stat-num">{{ stat.num }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>

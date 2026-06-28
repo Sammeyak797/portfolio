@@ -1,0 +1,50 @@
+<section class="about-wrap" id="about">
+  <div class="about-inner">
+    <div class="section-label">
+      <span class="line"></span>
+      <span class="label-text">About me</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="about-heading">
+          Engineer by practice,<br />
+          <span class="accent">not just by degree.</span>
+        </h2>
+        <p class="about-para">
+          I'm a Full Stack Software Engineer intern at Cooee, a UK-based startup, where I build and
+          maintain production features across the entire stack — from NestJS APIs and MongoDB
+          schemas to Angular UIs serving enterprise clients.
+        </p>
+        <p class="about-para">
+          I focus on writing code that scales — automating workflows with cron jobs, integrating
+          third-party APIs like Shopify GraphQL, and resolving critical bugs in live systems. I
+          don't just ship features; I understand the systems they run in.
+        </p>
+        <p class="about-para">
+          Currently pursuing B.E. in Information Technology at Sinhgad College of Engineering, Pune
+          — graduating June 2026. Actively seeking full-time SDE roles.
+        </p>
+      </div>
+
+      <div class="about-right">
+        <div class="highlights-grid">
+          <div class="highlight-card" *ngFor="let item of highlights">
+            <div class="highlight-icon">
+              <i class="ti {{ item.icon }}"></i>
+            </div>
+            <div class="highlight-text">
+              <span class="highlight-label">{{ item.label }}</span>
+              <span class="highlight-value">{{ item.value }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-status">
+          <div class="status-dot"></div>
+          <span>Open to full-time SDE opportunities</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<section class="projects-wrap" id="projects">
+  <div class="projects-inner">
+    <div class="section-label">
+      <span class="line"></span>
+      <span class="label-text">Projects</span>
+    </div>
+
+    <h2 class="section-heading">Things I've built</h2>
+
+    <div class="projects-grid">
+      <div
+        class="project-card"
+        *ngFor="let project of projects"
+        [class.featured]="project.featured"
+      >
+        <div class="project-card-top">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="ti ti-code"></i>
+            </div>
+            <div class="project-links">
+              <a [href]="project.codeUrl" target="_blank" class="icon-link" title="View Code">
+                <i class="ti ti-brand-github"></i>
+              </a>
+              <a [href]="project.liveUrl" target="_blank" class="icon-link" title="Live Demo">
+                <i class="ti ti-external-link"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-title-row">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <span class="featured-badge" *ngIf="project.featured">Featured</span>
+          </div>
+
+          <span class="project-period"> <i class="ti ti-calendar"></i> {{ project.period }} </span>
+
+          <p class="project-desc">{{ project.description }}</p>
+
+          <ul class="project-points">
+            <li *ngFor="let point of project.points">
+              <span class="point-dot"></span>
+              {{ point }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-stack">
+          <span class="stack-tag" *ngFor="let tech of project.stack">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

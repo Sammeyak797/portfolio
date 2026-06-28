@@ -1,0 +1,26 @@
+<section class="skills-wrap" id="skills">
+  <div class="skills-inner">
+    <div class="section-label">
+      <span class="line"></span>
+      <span class="label-text">Skills</span>
+    </div>
+
+    <h2 class="section-heading">What I work with</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card" *ngFor="let group of skillGroups">
+        <div class="skill-card-header">
+          <div class="skill-icon">
+            <i class="ti {{ group.icon }}"></i>
+          </div>
+          <span class="skill-category">{{ group.category }}</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag" *ngFor="let skill of group.skills">
+            {{ skill }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

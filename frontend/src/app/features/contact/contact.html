@@ -1,0 +1,48 @@
+<section class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <div class="section-label">
+      <span class="line"></span>
+      <span class="label-text">Contact</span>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2 class="contact-heading">
+          Let's work<br />
+          <span class="accent">together.</span>
+        </h2>
+        <p class="contact-desc">
+          I'm actively looking for full-time SDE roles. If you have an opportunity, a project, or
+          just want to connect — my inbox is always open.
+        </p>
+        <a href="mailto:wankhadesammeyak@gmail.com" class="btn-primary">
+          <i class="ti ti-send"></i>
+          Send me an email
+        </a>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-links">
+          <ng-container *ngFor="let link of links">
+            <a [href]="link.href" target="_blank" class="contact-link-card">
+              <div class="link-icon">
+                <i [class]="'ti ' + link.icon"></i>
+              </div>
+              <div class="link-info">
+                <span class="link-label">{{ link.label }}</span>
+                <span class="link-value">{{ link.value }}</span>
+              </div>
+              <i class="ti ti-arrow-right link-arrow"></i>
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>Designed & built by Sammeyak Wankhade</span>
+    <span class="footer-dot">·</span>
+    <span>{{ currentYear }}</span>
+  </footer>
+</section>
