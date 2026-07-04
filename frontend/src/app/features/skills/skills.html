@@ -1,12 +1,15 @@
 <section id="skills" class="skills-section">
   <div class="section-wrap">
-    <div class="section-title">
+    <div class="section-title reveal">
       <span class="prompt">$</span>
       <h2>tech_stack</h2>
     </div>
 
     <div class="skills-grid">
-      <div class="skill-group" *ngFor="let group of skillGroups">
+      <div
+        class="skill-group reveal reveal-delay-1"
+        *ngFor="let group of skillGroups; let i = index"
+      >
         <div class="group-header">
           <span class="prompt">></span>
           <span class="group-name">{{ group.category }}</span>

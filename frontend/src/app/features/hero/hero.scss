@@ -301,6 +301,24 @@
   }
 }
 
+.nav-logo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ccd6f6;
+  letter-spacing: -0.5px;
+
+  .prompt {
+    color: #00f5c3;
+  }
+
+  &::after {
+    content: '_';
+    color: #00f5c3;
+    animation: blink 1.2s step-end infinite;
+    margin-left: 1px;
+  }
+}
+
 @keyframes bounce {
   0%,
   100% {
