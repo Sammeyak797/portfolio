@@ -1,48 +1,60 @@
-<section class="about-wrap" id="about">
-  <div class="about-inner">
-    <div class="section-label">
-      <span class="line"></span>
-      <span class="label-text">About me</span>
+<section id="about" class="about-section">
+  <div class="section-wrap">
+    <div class="section-title">
+      <span class="prompt">$</span>
+      <h2>about_me</h2>
     </div>
 
     <div class="about-grid">
       <div class="about-left">
-        <h2 class="about-heading">
-          Engineer by practice,<br />
-          <span class="accent">not just by degree.</span>
-        </h2>
-        <p class="about-para">
-          I'm a Full Stack Software Engineer intern at Cooee, a UK-based startup, where I build and
-          maintain production features across the entire stack — from NestJS APIs and MongoDB
-          schemas to Angular UIs serving enterprise clients.
+        <p class="about-text">
+          <span class="comment">// who am i</span><br />
+          I'm a Full Stack Software Engineer intern at
+          <span class="highlight">Cooee</span>, a UK-based startup, where I build and maintain
+          production features across the entire stack.
         </p>
-        <p class="about-para">
-          I focus on writing code that scales — automating workflows with cron jobs, integrating
-          third-party APIs like Shopify GraphQL, and resolving critical bugs in live systems. I
-          don't just ship features; I understand the systems they run in.
+        <p class="about-text">
+          I work with <span class="highlight">NestJS</span>, <span class="highlight">Angular</span>,
+          <span class="highlight">MongoDB</span>, and
+          <span class="highlight">TypeScript</span> daily — automating workflows with cron jobs,
+          integrating Shopify GraphQL APIs, and resolving critical bugs in live systems.
         </p>
-        <p class="about-para">
-          Currently pursuing B.E. in Information Technology at Sinhgad College of Engineering, Pune
-          — graduating June 2026. Actively seeking full-time SDE roles.
+        <p class="about-text">
+          Pursuing B.E. in Information Technology at
+          <span class="highlight">Sinhgad College of Engineering</span>, Pune. CGPA:
+          <span class="accent-green">8.60/10</span>. Graduated June 2026.
         </p>
+
+        <div class="about-meta">
+          <div class="meta-item">
+            <span class="meta-key">location</span>
+            <span class="meta-sep">=</span>
+            <span class="meta-val">"Pune, India"</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">status</span>
+            <span class="meta-sep">=</span>
+            <span class="meta-val accent-green">"open to SDE roles"</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">email</span>
+            <span class="meta-sep">=</span>
+            <span class="meta-val">"wankhadesammeyak@gmail.com"</span>
+          </div>
+        </div>
       </div>
 
       <div class="about-right">
-        <div class="highlights-grid">
-          <div class="highlight-card" *ngFor="let item of highlights">
-            <div class="highlight-icon">
-              <i class="ti {{ item.icon }}"></i>
-            </div>
-            <div class="highlight-text">
-              <span class="highlight-label">{{ item.label }}</span>
-              <span class="highlight-value">{{ item.value }}</span>
-            </div>
+        <div class="about-card">
+          <div class="card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="card-filename">profile.json</span>
           </div>
-        </div>
-
-        <div class="about-status">
-          <div class="status-dot"></div>
-          <span>Open to full-time SDE opportunities</span>
+          <div class="card-body">
+            <pre>{{ profileJson }}</pre>
+          </div>
         </div>
       </div>
     </div>

@@ -1,48 +1,56 @@
-<section class="contact-wrap" id="contact">
-  <div class="contact-inner">
-    <div class="section-label">
-      <span class="line"></span>
-      <span class="label-text">Contact</span>
+<section id="contact" class="contact-section">
+  <div class="section-wrap">
+    <div class="section-title">
+      <span class="prompt">$</span>
+      <h2>get_in_touch</h2>
     </div>
 
-    <div class="contact-grid">
-      <div class="contact-left">
-        <h2 class="contact-heading">
-          Let's work<br />
-          <span class="accent">together.</span>
-        </h2>
-        <p class="contact-desc">
-          I'm actively looking for full-time SDE roles. If you have an opportunity, a project, or
-          just want to connect — my inbox is always open.
-        </p>
-        <a href="mailto:wankhadesammeyak@gmail.com" class="btn-primary">
-          <i class="ti ti-send"></i>
-          Send me an email
-        </a>
-      </div>
-
-      <div class="contact-right">
-        <div class="contact-links">
-          <ng-container *ngFor="let link of links">
-            <a [href]="link.href" target="_blank" class="contact-link-card">
-              <div class="link-icon">
-                <i [class]="'ti ' + link.icon"></i>
-              </div>
-              <div class="link-info">
-                <span class="link-label">{{ link.label }}</span>
-                <span class="link-value">{{ link.value }}</span>
-              </div>
-              <i class="ti ti-arrow-right link-arrow"></i>
+    <div class="contact-inner">
+      <div class="contact-terminal">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">contact.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p class="t-line"><span class="t-prompt">$</span> cat contact.txt</p>
+          <p class="t-output">I'm actively looking for full-time SDE roles.</p>
+          <p class="t-output">If you have an opportunity or just want to connect,</p>
+          <p class="t-output">my inbox is always open.</p>
+          <br />
+          <p class="t-line"><span class="t-prompt">$</span> ./send_message.sh</p>
+          <div class="t-actions">
+            <a href="mailto:wankhadesammeyak@gmail.com" class="t-btn">
+              <i class="ti ti-mail"></i> wankhadesammeyak&#64;gmail.com
             </a>
-          </ng-container>
+          </div>
+          <br />
+          <p class="t-line"><span class="t-prompt">$</span> ls socials/</p>
+          <div class="t-socials">
+            <a href="https://github.com/Sammeyak797" target="_blank" class="t-social">
+              <i class="ti ti-brand-github"></i> github
+            </a>
+            <a href="https://linkedin.com/in/sammeyak-wankhade" target="_blank" class="t-social">
+              <i class="ti ti-brand-linkedin"></i> linkedin
+            </a>
+            <a href="assets/resume/Sammeyak_Wankhade_Resume.pdf" target="_blank" class="t-social">
+              <i class="ti ti-file-text"></i> resume
+            </a>
+          </div>
+          <br />
+          <p class="t-line">
+            <span class="t-prompt">$</span>
+            <span class="t-cursor">▌</span>
+          </p>
         </div>
       </div>
     </div>
   </div>
 
   <footer class="footer">
-    <span>Designed & built by Sammeyak Wankhade</span>
-    <span class="footer-dot">·</span>
-    <span>{{ currentYear }}</span>
+    <span class="prompt">~/sammeyak</span>
+    <span class="footer-sep">—</span>
+    <span>designed & built by Sammeyak Wankhade · {{ year }}</span>
   </footer>
 </section>

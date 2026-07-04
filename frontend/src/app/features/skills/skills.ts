@@ -11,34 +11,28 @@ import { CommonModule } from '@angular/common';
 export class SkillsComponent {
   skillGroups = [
     {
-      category: 'Languages',
-      icon: 'ti-code',
-      skills: ['TypeScript', 'JavaScript', 'Java', 'Python', 'SQL'],
+      category: 'languages',
+      skills: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL'],
     },
     {
-      category: 'Frontend',
-      icon: 'ti-layout',
-      skills: ['Angular', 'HTML', 'CSS', 'SCSS', 'Tailwind CSS'],
+      category: 'frontend',
+      skills: ['Angular', 'HTML', 'SCSS', 'Tailwind CSS', 'Streamlit'],
     },
     {
-      category: 'Backend',
-      icon: 'ti-server',
-      skills: ['NestJS', 'Node.js', 'Express.js', 'REST APIs', 'GraphQL'],
+      category: 'backend',
+      skills: ['NestJS', 'Spring Boot', 'Node.js', 'Express.js', 'REST APIs', 'GraphQL'],
     },
     {
-      category: 'Databases',
-      icon: 'ti-database',
-      skills: ['MongoDB', 'MySQL', 'Redis'],
+      category: 'databases',
+      skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Redis'],
     },
     {
-      category: 'Tools & DevOps',
-      icon: 'ti-tools',
-      skills: ['Git', 'GitHub', 'Docker', 'AWS EC2', 'AWS S3', 'Cron Jobs'],
+      category: 'ai_ml',
+      skills: ['TensorFlow', 'Keras', 'OpenCV', 'CNN', 'RAG', 'LLM Fundamentals'],
     },
     {
-      category: 'Integrations',
-      icon: 'ti-plug',
-      skills: ['Shopify GraphQL API', 'JWT Auth', 'WebSockets', 'BullMQ', 'Kafka'],
+      category: 'devops_tools',
+      skills: ['Git', 'Docker', 'AWS EC2', 'AWS S3', 'Maven', 'Postman'],
     },
   ];
 }

@@ -1,30 +1,19 @@
-<section class="cert-wrap" id="certifications">
-  <div class="cert-inner">
-    <div class="section-label">
-      <span class="line"></span>
-      <span class="label-text">Certifications</span>
+<section id="certifications" class="cert-section">
+  <div class="section-wrap">
+    <div class="section-title">
+      <span class="prompt">$</span>
+      <h2>certifications</h2>
     </div>
 
-    <h2 class="section-heading">Credentials</h2>
-
-    <div class="cert-grid">
-      <div class="cert-card" *ngFor="let cert of certifications">
-        <div class="cert-left">
-          <div class="cert-icon">
-            <i class="ti {{ cert.icon }}"></i>
-          </div>
-        </div>
+    <div class="cert-list">
+      <div class="cert-item" *ngFor="let cert of certifications">
+        <span class="cert-icon"><i class="ti {{ cert.icon }}"></i></span>
         <div class="cert-info">
-          <h3 class="cert-title">{{ cert.title }}</h3>
-          <div class="cert-meta">
-            <span class="cert-issuer">{{ cert.issuer }}</span>
-            <span class="cert-dot">·</span>
-            <span class="cert-year">{{ cert.year }}</span>
-          </div>
+          <p class="cert-title">{{ cert.title }}</p>
+          <p class="cert-meta">{{ cert.issuer }} · {{ cert.year }}</p>
         </div>
         <a [href]="cert.verifyUrl" target="_blank" class="cert-verify">
-          <i class="ti ti-external-link"></i>
-          Verify
+          <i class="ti ti-external-link"></i> verify
         </a>
       </div>
     </div>

@@ -14,48 +14,38 @@ export class ProjectsComponent {
       title: 'Scalable URL Shortener with Analytics',
       period: 'Jan 2026',
       description:
-        'A production-grade backend service for authenticated URL shortening with Redis caching, analytics tracking, and JWT-secured endpoints.',
-      points: [
-        'Built scalable backend for authenticated URL shortening and redirection.',
-        'Implemented Redis caching with TTL to reduce database hits and improve redirect performance.',
-        'Developed analytics APIs to track clicks, timestamps, and user activity.',
-        'Secured endpoints using JWT authentication with user-level access control.',
-      ],
+        'Production-grade backend for authenticated URL shortening with Redis TTL caching, click analytics tracking, and JWT-secured endpoints.',
       stack: ['Flask', 'MongoDB', 'Redis', 'JWT'],
-      codeUrl: '#',
-      liveUrl: '#',
-      featured: true,
+      codeUrl: 'https://github.com/Sammeyak797/url-shortener',
+      liveUrl: null,
     },
     {
-      title: 'ThinkBoard – Multi-user SaaS Backend',
+      title: 'Smart CNC Predictive Maintenance',
       period: 'Nov 2025',
       description:
-        'A multi-user SaaS backend with REST APIs, Redis rate limiting, optimized MongoDB queries, and JWT-based session management.',
-      points: [
-        'Designed REST APIs for a multi-user platform supporting secure CRUD operations.',
-        'Implemented rate limiting using Redis to handle high-traffic scenarios.',
-        'Optimized MongoDB queries to improve response time for read-heavy endpoints.',
-        'Integrated JWT-based authentication for secure session management.',
-      ],
-      stack: ['Node.js', 'Express.js', 'MongoDB', 'Redis', 'JWT'],
-      codeUrl: '#',
-      liveUrl: '#',
-      featured: false,
+        'Real-time monitoring solution for CNC machines with data collection, performance tracking, predictive maintenance workflows, and operational dashboards.',
+      stack: ['Python', 'IoT', 'Data Processing'],
+      codeUrl: 'https://github.com/Sammeyak797/smart-cnc-predictive-maintenance',
+      liveUrl: null,
     },
     {
-      title: 'Real-Time Messaging System',
+      title: 'Plant Disease Detection System',
       period: 'Aug 2025',
       description:
-        'A WebSocket-based messaging system achieving sub-100ms latency, containerized with Docker and replacing HTTP polling entirely.',
-      points: [
-        'Developed WebSocket-based messaging system achieving sub-100ms latency.',
-        'Reduced server load by 50% by replacing HTTP polling with persistent connections.',
-        'Containerized the application using Docker for consistent deployment environments.',
-      ],
-      stack: ['Flask', 'WebSockets', 'Docker'],
-      codeUrl: '#',
-      liveUrl: '#',
-      featured: false,
+        'Deep learning CNN model for plant disease classification from images. Trained on agricultural datasets with OpenCV preprocessing and a Streamlit interface for real-time prediction.',
+      stack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Streamlit'],
+      codeUrl:
+        'https://github.com/Sammeyak797/Plant-Disease-Detection-System-for-Sustainable-Agriculture',
+      liveUrl: null,
+    },
+    {
+      title: 'ThinkBoard — Multi-user SaaS Backend',
+      period: 'Nov 2025',
+      description:
+        'REST API platform with Redis rate limiting, optimized MongoDB queries for read-heavy endpoints, and JWT session management.',
+      stack: ['Node.js', 'Express.js', 'MongoDB', 'Redis', 'JWT'],
+      codeUrl: 'https://github.com/Sammeyak797',
+      liveUrl: null,
     },
   ];
 }
