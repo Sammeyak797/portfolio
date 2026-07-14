@@ -64,7 +64,7 @@ export class HeroComponent implements OnInit, OnDestroy {
       this.timer = setTimeout(() => {
         this.reverse = true;
         this.runTypewriter();
-      }, 1500);
+      }, 1000);
       return;
     }
 
@@ -78,7 +78,7 @@ export class HeroComponent implements OnInit, OnDestroy {
     this.charIndex += this.reverse ? -1 : 1;
     this.displayedText = current.substring(0, this.charIndex);
 
-    this.timer = setTimeout(() => this.runTypewriter(), this.reverse ? 75 : 150);
+    this.timer = setTimeout(() => this.runTypewriter(), this.reverse ? 40 : 80);
   }
 
   scrollTo(sectionId: string): void {
