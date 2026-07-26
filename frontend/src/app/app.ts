@@ -6,6 +6,7 @@ import { ExperienceComponent } from './features/experience/experience';
 import { ProjectsComponent } from './features/projects/projects';
 import { CertificationsComponent } from './features/certifications/certifications';
 import { ContactComponent } from './features/contact/contact';
+import { TerminalComponent } from './features/terminal/terminal';
 import { ScrollAnimationService } from './core/services/scroll-animation';
 import { CursorComponent } from './shared/components/cursor/cursor';
 import { DotGridComponent } from './shared/components/dot-grid/dot-grid';
@@ -23,6 +24,7 @@ import { ParticlesComponent } from './shared/components/particles/particles';
     ProjectsComponent,
     CertificationsComponent,
     ContactComponent,
+    TerminalComponent,
     CursorComponent,
     DotGridComponent,
     ProgressBarComponent,

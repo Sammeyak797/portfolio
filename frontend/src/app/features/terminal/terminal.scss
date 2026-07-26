@@ -1,0 +1,252 @@
+.terminal-section {
+  background: #0d0d0d;
+  border-top: 1px solid #1a1a1a;
+}
+
+.terminal-hint {
+  font-size: 12px;
+  color: #3a3a3a;
+  margin-bottom: 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.terminal-wrap {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 760px;
+  cursor: text;
+  box-shadow:
+    0 0 0 1px #1a1a1a,
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(0, 245, 195, 0.03);
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    border-color: rgba(0, 245, 195, 0.15);
+    box-shadow:
+      0 0 0 1px rgba(0, 245, 195, 0.08),
+      0 20px 60px rgba(0, 0, 0, 0.6),
+      0 0 60px rgba(0, 245, 195, 0.05);
+  }
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 18px;
+  background: #111111;
+  border-bottom: 1px solid #1e1e1e;
+  position: relative;
+
+  .t-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: filter 0.2s;
+
+    &.red {
+      background: #ff5f57;
+      box-shadow: 0 0 6px rgba(255, 95, 87, 0.5);
+    }
+    &.yellow {
+      background: #febc2e;
+      box-shadow: 0 0 6px rgba(254, 188, 46, 0.5);
+    }
+    &.green {
+      background: #28c840;
+      box-shadow: 0 0 6px rgba(40, 200, 64, 0.5);
+    }
+  }
+
+  .t-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: #444;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.5px;
+  }
+}
+
+.terminal-body {
+  padding: 1.5rem 1.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 2;
+  min-height: 300px;
+  max-height: 460px;
+  overflow-y: auto;
+  color: #8892b0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(0, 0, 0, 0.03) 1px,
+    rgba(0, 0, 0, 0.03) 2px
+  );
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 245, 195, 0.2);
+    border-radius: 4px;
+  }
+}
+
+.line-cmd {
+  color: #00f5c3;
+  margin-top: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: '❯';
+    color: #e94560;
+    font-size: 11px;
+  }
+}
+
+.line-output {
+  color: #8892b0;
+  white-space: pre;
+  padding-left: 0;
+  display: block;
+
+  &:first-child {
+    color: #00f5c3;
+    font-weight: 700;
+    font-size: 13px;
+  }
+}
+
+.line-error {
+  color: #e94560;
+  padding-left: 1rem;
+
+  &::before {
+    content: '✗ ';
+    font-size: 11px;
+  }
+}
+
+.line-blank {
+  height: 6px;
+  display: block;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #161616;
+
+  .input-prompt {
+    color: #e94560;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 13px;
+
+    &::before {
+      content: '❯ ';
+      color: #00f5c3;
+    }
+  }
+}
+
+.term-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ccd6f6;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  width: 100%;
+  caret-color: #00f5c3;
+
+  &::placeholder {
+    color: #2a2a2a;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-wrap {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  .terminal-header {
+    padding: 10px 14px;
+
+    .t-dot {
+      width: 10px;
+      height: 10px;
+    }
+
+    .t-title {
+      font-size: 10px;
+    }
+  }
+
+  .terminal-body {
+    padding: 1rem 1rem;
+    font-size: 11px;
+    line-height: 1.8;
+    min-height: 240px;
+    max-height: 360px;
+  }
+
+  .line-cmd {
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .line-output {
+    font-size: 11px;
+    padding-left: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .line-error {
+    font-size: 11px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .input-line {
+    gap: 6px;
+    padding-top: 8px;
+  }
+
+  .term-input {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-body {
+    padding: 0.75rem;
+    font-size: 10.5px;
+    min-height: 200px;
+    max-height: 300px;
+  }
+
+  .terminal-header .t-title {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+}

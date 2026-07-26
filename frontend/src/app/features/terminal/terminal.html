@@ -1,0 +1,44 @@
+<section id="terminal-section" class="terminal-section">
+  <div class="section-wrap">
+    <div class="section-title reveal">
+      <span class="prompt">$</span>
+      <span class="section-num">06.</span>
+      <h2>terminal</h2>
+    </div>
+
+    <p class="terminal-hint reveal">
+      <span class="comment">// interactive — try typing commands below</span>
+    </p>
+
+    <div class="terminal-wrap reveal" (click)="focusInput()">
+      <div class="terminal-header">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">sammeyak@portfolio: ~</span>
+      </div>
+
+      <div class="terminal-body" #terminalBody>
+        <div *ngFor="let line of history" [ngClass]="'line-' + line.type">
+          {{ line.text }}
+        </div>
+
+        <div class="input-line">
+          <span class="input-prompt">$</span>
+          <input
+            #termInput
+            class="term-input"
+            [(ngModel)]="input"
+            (keydown)="onKeyDown($event)"
+            (keydown.enter)="runCommand()"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="type a command..."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
