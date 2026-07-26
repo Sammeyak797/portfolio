@@ -9,6 +9,8 @@ import { ContactComponent } from './features/contact/contact';
 import { ScrollAnimationService } from './core/services/scroll-animation';
 import { CursorComponent } from './shared/components/cursor/cursor';
 import { DotGridComponent } from './shared/components/dot-grid/dot-grid';
+import { ProgressBarComponent } from './shared/components/progress-bar/progress-bar';
+import { ParticlesComponent } from './shared/components/particles/particles';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +25,8 @@ import { DotGridComponent } from './shared/components/dot-grid/dot-grid';
     ContactComponent,
     CursorComponent,
     DotGridComponent,
+    ProgressBarComponent,
+    ParticlesComponent,
   ],
   templateUrl: './app.html',
 })

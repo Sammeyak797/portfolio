@@ -16,18 +16,50 @@
   display: flex;
   gap: 0;
   background: #111111;
-  transition: background 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
 
   &:hover {
     background: #141414;
+    transform: translateX(6px);
+
     .project-index {
       color: #00f5c3;
+    }
+
+    .project-expand {
+      max-height: 120px;
+      opacity: 1;
+    }
+
+    .p-tag {
+      color: #00f5c3;
+      border-color: rgba(0, 245, 195, 0.3);
+      background: rgba(0, 245, 195, 0.06);
     }
   }
 
   & + & {
     border-top: 1px solid #1e1e1e;
   }
+}
+
+.project-expand {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease;
+  font-size: 11px;
+  color: #3a3a3a;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #1e1e1e;
+  line-height: 1.8;
 }
 
 .project-index {

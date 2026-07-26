@@ -7,7 +7,15 @@
     </div>
 
     <div class="projects-list">
-      <div class="project-card reveal" *ngFor="let p of projects; let i = index">
+      <div
+        class="project-card reveal"
+        *ngFor="let p of projects; let i = index"
+        [class.reveal-delay-1]="i === 0"
+        [class.reveal-delay-2]="i === 1"
+        [class.reveal-delay-3]="i === 2"
+        [class.reveal-delay-4]="i === 3"
+        [class.reveal-delay-5]="i === 4"
+      >
         <div class="project-index">{{ i + 1 | number: '2.0' }}</div>
         <div class="project-main">
           <div class="project-top">
@@ -23,6 +31,9 @@
           </div>
           <p class="project-period">{{ p.period }}</p>
           <p class="project-desc">{{ p.description }}</p>
+          <div class="project-expand">
+            <span *ngFor="let point of p.points">▸ {{ point }}<br /></span>
+          </div>
           <div class="project-stack">
             <ng-container *ngFor="let tech of p.stack">
               <span class="p-tag">{{ tech }}</span>
