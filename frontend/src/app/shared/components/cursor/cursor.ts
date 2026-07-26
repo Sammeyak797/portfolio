@@ -4,51 +4,55 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   selector: 'app-cursor',
   standalone: true,
   template: `
+    <div class="spotlight" id="spotlight"></div>
     <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
   `,
   styles: [
     `
+      .spotlight {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(
+          circle,
+          rgba(0, 245, 195, 0.045) 0%,
+          rgba(0, 245, 195, 0.02) 35%,
+          transparent 70%
+        );
+        transition: opacity 0.3s;
+        will-change: left, top;
+      }
+
       .cursor-dot {
         position: fixed;
-        width: 5px;
-        height: 5px;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 4px;
         background: #00f5c3;
         border-radius: 50%;
         pointer-events: none;
         z-index: 9999;
         transform: translate(-50%, -50%);
-        box-shadow: 0 0 6px #00f5c3;
-        will-change: transform;
-        top: 0;
-        left: 0;
-      }
-
-      .cursor-ring {
-        position: fixed;
-        width: 28px;
-        height: 28px;
-        border: 1px solid rgba(0, 245, 195, 0.35);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transform: translate(-50%, -50%);
-        will-change: transform;
-        top: 0;
-        left: 0;
-        transition:
-          width 0.2s,
-          height 0.2s,
-          border-color 0.2s;
+        box-shadow:
+          0 0 6px #00f5c3,
+          0 0 12px rgba(0, 245, 195, 0.4);
+        will-change: left, top;
       }
     `,
   ],
 })
 export class CursorComponent implements OnInit, OnDestroy {
+  private spotlight!: HTMLElement;
   private dot!: HTMLElement;
-  private ring!: HTMLElement;
-  private ringX = 0;
-  private ringY = 0;
+  private spotX = 0;
+  private spotY = 0;
   private mouseX = 0;
   private mouseY = 0;
   private rafId!: number;
@@ -61,10 +65,10 @@ export class CursorComponent implements OnInit, OnDestroy {
   };
 
   ngOnInit(): void {
+    this.spotlight = document.getElementById('spotlight')!;
     this.dot = document.getElementById('cursorDot')!;
-    this.ring = document.getElementById('cursorRing')!;
     window.addEventListener('mousemove', this.onMouseMove);
-    this.animateRing();
+    this.animateSpotlight();
   }
 
   ngOnDestroy(): void {
@@ -72,11 +76,11 @@ export class CursorComponent implements OnInit, OnDestroy {
     cancelAnimationFrame(this.rafId);
   }
 
-  private animateRing(): void {
-    this.ringX += (this.mouseX - this.ringX) * 0.12;
-    this.ringY += (this.mouseY - this.ringY) * 0.12;
-    this.ring.style.left = `${this.ringX}px`;
-    this.ring.style.top = `${this.ringY}px`;
-    this.rafId = requestAnimationFrame(() => this.animateRing());
+  private animateSpotlight(): void {
+    this.spotX += (this.mouseX - this.spotX) * 0.08;
+    this.spotY += (this.mouseY - this.spotY) * 0.08;
+    this.spotlight.style.left = `${this.spotX}px`;
+    this.spotlight.style.top = `${this.spotY}px`;
+    this.rafId = requestAnimationFrame(() => this.animateSpotlight());
   }
 }
