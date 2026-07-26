@@ -81,3 +81,39 @@
     font-size: 11px;
   }
 }
+
+.skill-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+.skill-level {
+  margin-left: auto;
+  font-size: 10px;
+  color: #00f5c3;
+}
+
+.skill-bar {
+  height: 2px;
+  background: #1e1e1e;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, #00f5c3, #e94560);
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.2s ease;
+  animation: barGrow 1.2s ease forwards;
+}
+
+@keyframes barGrow {
+  from {
+    width: 0;
+  }
+}

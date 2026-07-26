@@ -12,27 +12,59 @@ export class SkillsComponent {
   skillGroups = [
     {
       category: 'languages',
-      skills: ['Java', 'TypeScript', 'JavaScript', 'Python', 'SQL'],
+      skills: [
+        { name: 'TypeScript', level: 90 },
+        { name: 'JavaScript', level: 88 },
+        { name: 'Java', level: 80 },
+        { name: 'Python', level: 75 },
+        { name: 'SQL', level: 78 },
+      ],
     },
     {
       category: 'frontend',
-      skills: ['Angular', 'HTML', 'SCSS', 'Tailwind CSS', 'Streamlit'],
+      skills: [
+        { name: 'Angular', level: 85 },
+        { name: 'HTML', level: 90 },
+        { name: 'SCSS', level: 82 },
+        { name: 'Tailwind CSS', level: 78 },
+      ],
     },
     {
       category: 'backend',
-      skills: ['NestJS', 'Spring Boot', 'Node.js', 'Express.js', 'REST APIs', 'GraphQL'],
+      skills: [
+        { name: 'NestJS', level: 88 },
+        { name: 'Node.js', level: 85 },
+        { name: 'Spring Boot', level: 75 },
+        { name: 'REST APIs', level: 90 },
+        { name: 'GraphQL', level: 72 },
+      ],
     },
     {
       category: 'databases',
-      skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Redis'],
+      skills: [
+        { name: 'MongoDB', level: 88 },
+        { name: 'MySQL', level: 80 },
+        { name: 'PostgreSQL', level: 72 },
+        { name: 'Redis', level: 78 },
+      ],
     },
     {
       category: 'ai_ml',
-      skills: ['TensorFlow', 'Keras', 'OpenCV', 'CNN', 'RAG', 'LLM Fundamentals'],
+      skills: [
+        { name: 'TensorFlow', level: 70 },
+        { name: 'Keras', level: 68 },
+        { name: 'OpenCV', level: 65 },
+        { name: 'RAG / LLMs', level: 60 },
+      ],
     },
     {
       category: 'devops_tools',
-      skills: ['Git', 'Docker', 'AWS EC2', 'AWS S3', 'Maven', 'Postman'],
+      skills: [
+        { name: 'Git', level: 90 },
+        { name: 'Docker', level: 72 },
+        { name: 'AWS', level: 65 },
+        { name: 'Postman', level: 88 },
+      ],
     },
   ];
 }

@@ -7,6 +7,8 @@ import { ProjectsComponent } from './features/projects/projects';
 import { CertificationsComponent } from './features/certifications/certifications';
 import { ContactComponent } from './features/contact/contact';
 import { ScrollAnimationService } from './core/services/scroll-animation';
+import { CursorComponent } from './shared/components/cursor/cursor';
+import { DotGridComponent } from './shared/components/dot-grid/dot-grid';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +21,8 @@ import { ScrollAnimationService } from './core/services/scroll-animation';
     ProjectsComponent,
     CertificationsComponent,
     ContactComponent,
+    CursorComponent,
+    DotGridComponent,
   ],
   templateUrl: './app.html',
 })

@@ -2,14 +2,12 @@
   <div class="section-wrap">
     <div class="section-title reveal">
       <span class="prompt">$</span>
+      <span class="section-num">02.</span>
       <h2>tech_stack</h2>
     </div>
 
     <div class="skills-grid">
-      <div
-        class="skill-group reveal reveal-delay-1"
-        *ngFor="let group of skillGroups; let i = index"
-      >
+      <div class="skill-group reveal" *ngFor="let group of skillGroups">
         <div class="group-header">
           <span class="prompt">></span>
           <span class="group-name">{{ group.category }}</span>
@@ -17,8 +15,14 @@
         <div class="skill-list">
           <ng-container *ngFor="let skill of group.skills">
             <div class="skill-item">
-              <span class="skill-bullet">▸</span>
-              <span class="skill-name">{{ skill }}</span>
+              <div class="skill-top">
+                <span class="skill-bullet">▸</span>
+                <span class="skill-name">{{ skill.name }}</span>
+                <span class="skill-level">{{ skill.level }}%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" [style.width]="skill.level + '%'"></div>
+              </div>
             </div>
           </ng-container>
         </div>

@@ -18,19 +18,9 @@ export class HeroComponent implements OnInit, OnDestroy {
   ];
 
   menuOpen = false;
-
-  toggleMenu(): void {
-    this.menuOpen = !this.menuOpen;
-  }
-
-  closeMenu(): void {
-    this.menuOpen = false;
-  }
-
   isScrolled = false;
   activeSection = '';
 
-  // Typewriter
   texts = [
     'build digital experiences.',
     'build things for the web.',
@@ -42,6 +32,13 @@ export class HeroComponent implements OnInit, OnDestroy {
   private charIndex = 0;
   private reverse = false;
   private timer: any;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
 
   @HostListener('window:scroll')
   onScroll(): void {
@@ -77,7 +74,6 @@ export class HeroComponent implements OnInit, OnDestroy {
 
     this.charIndex += this.reverse ? -1 : 1;
     this.displayedText = current.substring(0, this.charIndex);
-
     this.timer = setTimeout(() => this.runTypewriter(), this.reverse ? 40 : 80);
   }
 
