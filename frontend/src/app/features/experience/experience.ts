@@ -22,7 +22,7 @@ export class ExperienceComponent {
         'Integrated Shopify GraphQL APIs to extract and persist store metadata.',
         'Executed 15+ database migration scripts and optimized aggregation pipelines improving reporting by 30%.',
         'Resolved critical production bugs — trial extension failures, revenue calculation errors.',
-        'Delivered 50+ UI improvements and new features for enterprise clients.',
+        'Delivered 300+ UI improvements and new features for enterprise clients.',
         'Processed and analyzed data from 1000+ merchant records via Shopify API integrations.',
       ],
       stack: ['NestJS', 'Angular', 'MongoDB', 'TypeScript', 'GraphQL', 'AWS', 'Cron Jobs'],
